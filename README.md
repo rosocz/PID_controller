@@ -100,11 +100,11 @@ it oscillates around desired value. Higher value of parameter causes more sensit
 reaction to overshooting of the value and tries to get back on track fast, which leads to 
 overshooting on other side.
 
-*I (Integral part) - this parameter compensates difference between ideal and real life environment. 
+* I (Integral part) - this parameter compensates difference between ideal and real life environment. 
 Construction problem of steering, pressure of tires affects steering values. This parameter helps to 
 PID takes such influences into account. Simulator works with ideal environment so there is compensation not required.
 
-*D (Differential part) - parameter, which makes PID controller work a bit more smooth. As it can be seen at equation, 
+* D (Differential part) - parameter, which makes PID controller work a bit more smooth. As it can be seen at equation, 
 it counts with history of PID and tries to avoid big rapid changes if Small value of the parameter is chosen. 
 Big value parameter causes quite fast reaction to overshooting.
 
