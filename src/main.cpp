@@ -33,7 +33,6 @@ int main()
   uWS::Hub h;
 
   PID pid;
-  PID pidSpeed;
   // TODO: Initialize the pid variable.
 
   pid.Init(0.1, 0.0, 2.0);
