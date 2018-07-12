@@ -93,6 +93,27 @@ that's just a guess.
 One last note here: regardless of the IDE used, every submitted project must
 still be compilable with cmake and make./
 
+## Components description
+
+* P (Proportional part) - based on CTE (distance from required trajectory) 
+it oscillates around desired value. Higher value of parameter causes more sensitive 
+reaction to overshooting of the value and tries to get back on track fast, which leads to 
+overshooting on other side.
+
+*I (Integral part) - this parameter compensates difference between ideal and real life environment. 
+Construction problem of steering, pressure of tires affects steering values. This parameter helps to 
+PID takes such influences into account. Simulator works with ideal environment so there is compensation not required.
+
+*D (Differential part) - parameter, which makes PID controller work a bit more smooth. As it can be seen at equation, 
+it counts with history of PID and tries to avoid big rapid changes if Small value of the parameter is chosen. 
+Big value parameter causes quite fast reaction to overshooting.
+
+## Selecting hyperparameter value
+
+I used manual selection only. P parameter needs to be rather small, we don't want zig zag trajectory.
+I parameter is not applicable, we are working with ideal environment and D parameterdoesn't have to be big number as well because I implemented
+speed control therefore any problem are causing slow down and easier reaction. I value is the highest because we wish to have rather smooth trajectory.    
+
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
