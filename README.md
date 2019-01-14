@@ -113,7 +113,3 @@ Big value parameter causes quite fast reaction to overshooting.
 I used manual selection only. P parameter needs to be rather small, we don't want zig zag trajectory.
 I parameter is not applicable, we are working with ideal environment and D parameterdoesn't have to be big number as well because I implemented
 speed control therefore any problem are causing slow down and easier reaction. I value is the highest because we wish to have rather smooth trajectory.    
-
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
